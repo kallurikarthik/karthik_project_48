@@ -67,6 +67,11 @@ public class Employee_info {
 		Logout_button.click();
 	}
 	
+	public void Click_on_New_Employee_button()
+	{
+		New_Employee_button.click();
+	}
+	
 	public void Click_on_Edit_button()
 	{
 		Edit_button.click();

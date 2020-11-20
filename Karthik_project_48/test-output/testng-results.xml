@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="52348" started-at="2020-11-20T16:07:52 IST" finished-at="2020-11-20T16:08:45 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="52348" started-at="2020-11-20T16:07:52 IST" finished-at="2020-11-20T16:08:45 IST">
+      <class name="web_tests.Test_Employer">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:web_tests.Test_Employer@3a883ce7]" name="beforeClass" is-config="true" duration-ms="6058" started-at="2020-11-20T16:07:52 IST" finished-at="2020-11-20T16:07:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="Tc010_Admin_Create_New_Employee_Valid()[pri:0, instance:web_tests.Test_Employer@3a883ce7]" name="Tc010_Admin_Create_New_Employee_Valid" duration-ms="11708" started-at="2020-11-20T16:07:59 IST" finished-at="2020-11-20T16:08:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc010_Admin_Create_New_Employee_Valid -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:web_tests.Test_Employer@3a883ce7]" name="afterMethod" is-config="true" duration-ms="325" started-at="2020-11-20T16:08:10 IST" finished-at="2020-11-20T16:08:11 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void web_tests.Test_Employer.Tc010_Admin_Create_New_Employee_Valid() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="Tc011_Admin_Create_New_Employee_Invalid()[pri:1, instance:web_tests.Test_Employer@3a883ce7]" name="Tc011_Admin_Create_New_Employee_Invalid" duration-ms="8409" started-at="2020-11-20T16:08:11 IST" finished-at="2020-11-20T16:08:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc011_Admin_Create_New_Employee_Invalid -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:web_tests.Test_Employer@3a883ce7]" name="afterMethod" is-config="true" duration-ms="203" started-at="2020-11-20T16:08:19 IST" finished-at="2020-11-20T16:08:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void web_tests.Test_Employer.Tc011_Admin_Create_New_Employee_Invalid() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="Tc012_Admin_Create_New_Employee_Blank()[pri:2, instance:web_tests.Test_Employer@3a883ce7]" name="Tc012_Admin_Create_New_Employee_Blank" duration-ms="15299" started-at="2020-11-20T16:08:19 IST" finished-at="2020-11-20T16:08:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc012_Admin_Create_New_Employee_Blank -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:web_tests.Test_Employer@3a883ce7]" name="afterMethod" is-config="true" duration-ms="209" started-at="2020-11-20T16:08:35 IST" finished-at="2020-11-20T16:08:35 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void web_tests.Test_Employer.Tc012_Admin_Create_New_Employee_Blank() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:web_tests.Test_Employer@3a883ce7]" name="afterClass" is-config="true" duration-ms="10085" started-at="2020-11-20T16:08:35 IST" finished-at="2020-11-20T16:08:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- web_tests.Test_Employer -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

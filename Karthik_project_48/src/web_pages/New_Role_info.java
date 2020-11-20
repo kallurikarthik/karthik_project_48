@@ -1,6 +1,8 @@
 package web_pages;
 
-import org.openqa.selenium.By;
+
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +13,7 @@ public class New_Role_info {
      
 	WebDriver driver;
 	private String title="Admin_Roles_details";
+	
 	
 	public New_Role_info(WebDriver driver)
 	
@@ -45,13 +48,13 @@ public class New_Role_info {
 		return flag;
 	}
 	
-	public void Click_on_Role_Name_editbox(String Rolename)
+	public void Type_on_Role_Name_editbox(String Rolename)
 	{
 		Role_Name_editbox.clear();
 		Role_Name_editbox.sendKeys(Rolename);
 	}
 	
-	public void Click_on_Role_desc_editbox(String Roledesc)
+	public void Type_on_Role_desc_editbox(String Roledesc)
 	{
 		Role_desc_editbox.clear();
 		Role_desc_editbox.sendKeys(Roledesc);
@@ -59,7 +62,7 @@ public class New_Role_info {
 	
 	public void Select_Role_type_dropdown(String Role_type)
 	{
-		new Select(driver.findElement(By.xpath("//select[@id='lstRtypeN']"))).selectByVisibleText(Role_type);
+		new Select(Role_type_dropdown).selectByVisibleText(Role_type);
 	}
 	
 	public void Click_on_Submit_button()
@@ -76,6 +79,28 @@ public class New_Role_info {
 	{
 		
 		Cancel_button.click();
+	}
+	
+	public boolean is_Alertpresent()
+	{
+		try {
+			driver.switchTo().alert();
+			return true;
+			
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	
+	
+	public void Close_Alert()
+	{
+		if(is_Alertpresent())
+		driver.switchTo().alert().accept();
+		
+		else
+			System.out.println("Alert not present");
 	}
 	
 	

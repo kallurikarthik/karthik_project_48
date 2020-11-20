@@ -1,6 +1,5 @@
 package web_pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,7 +33,7 @@ public class New_Employee_info {
 	@FindBy(id="txtLpwd")
 	public WebElement Login_password_editbox;
 	
-	@FindBy(xpath="//select[contains(@id='lst_Roles')]")
+	@FindBy(xpath = "//select[contains(@id,'lst_Roles')]")
 	public WebElement Role_dropdown;
 	
 	@FindBy(xpath="//select[@id='lst_Branch']")
@@ -86,12 +85,12 @@ public class New_Employee_info {
 	
 	public void Select_Role_dropdown(String Role)
 	{
-		new Select(driver.findElement(By.xpath("//select[contains(@id='lst_Roles')]"))).selectByVisibleText(Role);
+		new Select(Role_dropdown).selectByVisibleText(Role);
 	}
 	
 	public void Select_Branch_dropdown(String Branch)
 	{
-		new Select(driver.findElement(By.xpath("//select[@id='lst_Branch']"))).selectByVisibleText(Branch);
+		new Select(Branch_dropdown).selectByVisibleText(Branch);
 	}
 	
 	public void Click_on_Submit_button() 
@@ -107,6 +106,30 @@ public class New_Employee_info {
 	public void Click_on_Cancel_button()
 	{
 		Cancel_button.click();
+	}
+	
+	
+	
+	public boolean is_Alertpresent()
+	{
+		try {
+			driver.switchTo().alert();
+			return true;
+			
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	
+	
+	public void Close_Alert()
+	{
+		if(is_Alertpresent())
+		driver.switchTo().alert().accept();
+		
+		else
+			System.out.println("Alert not present");
 	}
 	
 }

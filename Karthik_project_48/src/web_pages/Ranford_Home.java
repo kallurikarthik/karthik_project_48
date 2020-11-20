@@ -1,6 +1,6 @@
 package web_pages;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -141,7 +141,7 @@ public class Ranford_Home {
 	public void Click_on_Branch_Selection_Dropdown(String Branch_Selection)
 	{
 		
-		new Select(driver.findElement(By.xpath("//select[@id='drlist']"))).selectByVisibleText(Branch_Selection);
+		new Select(Branch_Selection_Dropdown).selectByVisibleText(Branch_Selection);
 	}
 	
 	public void Type_admin_Username_Editbox(String Username)
@@ -204,11 +204,26 @@ public class Ranford_Home {
 		Site_map_button.click();
 	}
 	
+	public boolean is_Alertpresent()
+	{
+		try {
+			driver.switchTo().alert();
+			return true;
+			
+		} catch (Exception e) {
+			return false;
+		}
+	}
 	
 	
-	
-	
-	
+	public void Close_Alert()
+	{
+		if(is_Alertpresent())
+		driver.switchTo().alert().accept();
+		
+		else
+			System.out.println("Alert not present");
+	}
 	
 	
 	

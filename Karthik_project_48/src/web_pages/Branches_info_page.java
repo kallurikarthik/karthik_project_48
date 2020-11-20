@@ -1,6 +1,6 @@
 package web_pages;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -70,20 +70,20 @@ public class Branches_info_page {
     
     public void Select_country_dropdown(String Country_name)
     {
-    	new Select(driver.findElement(By.xpath("//select[@id='lst_countryS']"))).selectByVisibleText(Country_name);
+    	new Select(country_dropdown).selectByVisibleText(Country_name);
     	
     }
     
     public void Select_State_dropdown(String State_name)
     {
-    	new Select(driver.findElement(By.xpath("//select[@id='lst_stateS']"))).selectByVisibleText(State_name);
+    	new Select(State_dropdown).selectByVisibleText(State_name);
     	
     }
     
     public void Select_city_dropdown(String City_name)
     {
     	
-    	new Select(driver.findElement(By.xpath("//select[@id='lst_cityS']"))).selectByVisibleText(City_name);
+    	new Select(city_dropdown).selectByVisibleText(City_name);
     }
     
     public void Click_on_Search_button()
@@ -122,4 +122,24 @@ public class Branches_info_page {
     	Next_Next_Button.click();
     }
 
+    public boolean is_Alertpresent()
+	{
+		try {
+			driver.switchTo().alert();
+			return true;
+			
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	
+	public void Close_Alert()
+	{
+		if(is_Alertpresent())
+		driver.switchTo().alert().accept();
+		
+		else
+			System.out.println("Alert not present");
+	}
 }

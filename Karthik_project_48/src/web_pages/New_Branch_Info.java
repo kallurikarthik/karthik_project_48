@@ -1,6 +1,5 @@
 package web_pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -134,20 +133,20 @@ public class New_Branch_Info {
 	
 	public void Select_Country_dropdown(String Country_name)
     {
-		new Select(driver.findElement(By.xpath("//select[@id='lst_counrtyU']"))).selectByVisibleText(Country_name);
+		new Select(Country_dropdown).selectByVisibleText(Country_name);
     	
     }
     
     public void Select_State_dropdown(String State_name)
     {
-    	new Select(driver.findElement(By.xpath("//select[@id='lst_stateI']"))).selectByVisibleText(State_name);
+    	new Select(State_dropdown).selectByVisibleText(State_name);
     	
     }
     
     public void Select_City_dropdown(String City_name)
     {
     	
-       new Select(driver.findElement(By.xpath("//select[@id='lst_cityI']"))).selectByVisibleText(City_name);
+       new Select(City_dropdown).selectByVisibleText(City_name);
     }
 	
     public void Click_on_Submit_button()
@@ -164,6 +163,29 @@ public class New_Branch_Info {
     {
     	Cancel_button.click();
     }
+    
+    public boolean is_Alertpresent()
+	{
+		try {
+			driver.switchTo().alert();
+			return true;
+			
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	
+	public void Close_Alert()
+	{
+		if(is_Alertpresent())
+		{
+			driver.switchTo().alert().accept();
+			System.out.println("alert closed successfully");
+		}	
+		else
+			System.out.println("Alert not presented");
+	}
 	
 	
 }

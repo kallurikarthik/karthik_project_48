@@ -1,6 +1,5 @@
 package web_pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -80,12 +79,12 @@ public class Users_info {
 	
 	public void Select_Branches_dropdown(String Branch_name)
 	{
-		new Select(driver.findElement(By.xpath("//select[@id='lst_branchS']"))).selectByVisibleText(Branch_name);
+		new Select(Branches_dropdown).selectByVisibleText(Branch_name);
 	}
 	
 	public void Select_Roles_dropdown(String Role_name)
 	{
-		new Select(driver.findElement(By.xpath("//select[@id='lst_rolesS']"))).selectByVisibleText(Role_name);
+		new Select(Roles_dropdown).selectByVisibleText(Role_name);
 	}
 	
 	public void click_on_Search_button() 

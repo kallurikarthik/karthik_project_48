@@ -1,6 +1,5 @@
 package web_pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -83,17 +82,17 @@ public class Newuser_info {
 	
 	public void Select_Role_dropdown(String Role_name)
 	{
-		new Select(driver.findElement(By.xpath("//select[contains(@id,'lst_Roles')]"))).selectByVisibleText(Role_name);
+		new Select(Role_dropdown).selectByVisibleText(Role_name);
 	}
 	
 	public void Select_Branch_dropdown(String Branch_name)
 	{
-		new Select(driver.findElement(By.xpath("//select[@id='lst_Branch']"))).selectByVisibleText(Branch_name);
+		new Select(Branch_dropdown).selectByVisibleText(Branch_name);
 	}
 	
 	public void Select_Customer_ID_dropdown(int id)
 	{
-		new Select(driver.findElement(By.xpath("//select[@id='DrCName']"))).selectByIndex(id);
+		new Select(Customer_ID_dropdown).selectByIndex(id);
 	}
 	
 	public void Type_Customer_Name_editbox(String Customername)
@@ -136,4 +135,28 @@ public class Newuser_info {
     {
     	Cancel_button.click();
     }
+    
+    
+    
+    public boolean is_Alertpresent()
+	{
+		try {
+			driver.switchTo().alert();
+			return true;
+			
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	
+	
+	public void Close_Alert()
+	{
+		if(is_Alertpresent())
+		driver.switchTo().alert().accept();
+		
+		else
+			System.out.println("Alert not present");
+	}
 }
