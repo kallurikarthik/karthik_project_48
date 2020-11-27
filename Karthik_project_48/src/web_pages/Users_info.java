@@ -49,7 +49,7 @@ public class Users_info {
 	@FindBy(xpath="(//img[contains(@src,'delete.gif')])[1]")
 	public WebElement Delete_button;
 	
-	public boolean Is_Employee_homepage_opened()
+	public boolean Is_Users_homepage_opened()
 	{
 		String Runtime_title=driver.getTitle();
 		boolean flag=Runtime_title.contains(title);
@@ -108,6 +108,26 @@ public class Users_info {
 		Delete_button.click();
 	}
 	
+	public boolean is_Alertpresent()
+	{
+		try {
+			driver.switchTo().alert();
+			return true;
+			
+		} catch (Exception e) {
+			return false;
+		}
+	}
+	
+	
+	public void Close_Alert()
+	{
+		if(is_Alertpresent())
+		driver.switchTo().alert().accept();
+		
+		else
+			System.out.println("Alert not present");
+	}
 	
 	
 	

@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="web_tests.Test_Employer">
+      <class name="web_tests.Test_Branch_update">
         <methods>
           <include name="afterClass"/>
-          <include name="Tc010_Admin_Create_New_branch_Valid"/>
           <include name="afterMethod"/>
+          <include name="Tc016_Verify_Branch_updation_link"/>
           <include name="beforeClass"/>
         </methods>
-      </class> <!-- web_tests.Test_Employer -->
+      </class> <!-- web_tests.Test_Branch_update -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

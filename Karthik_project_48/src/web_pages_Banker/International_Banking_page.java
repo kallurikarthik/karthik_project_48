@@ -1,22 +1,23 @@
-package web_pages;
+package web_pages_Banker;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class personal_banking_info {
-	
-    WebDriver driver;
+public class International_Banking_page 
+{
+	WebDriver driver; 
     private String title="login";
-    
-	public personal_banking_info(WebDriver driver)
+	
+
+	public International_Banking_page(WebDriver driver)
 	{
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 		
 	}
-	
+
 	@FindBy(xpath="//a[@href='http://ravinderbasani.com']")
 	public WebElement Home_button;
 	
@@ -41,34 +42,14 @@ public class personal_banking_info {
 	@FindBy(id="btnGO")
 	public WebElement Login_button;
 	
-	@FindBy(xpath="//*[@id=\"Table_01\"]/tbody/tr[2]/td/table/tbody/tr/td/marquee")
-	public WebElement News_Pages;
-	
-	@FindBy(linkText="Customer Service")
-	public WebElement Customer_Service_link_button;
-	
-	@FindBy(linkText="Internet Banking FAQ's")
-	public WebElement International_banking_faqs_button;
-	
-	@FindBy(linkText=" Privacy")
-	public WebElement privacy_button;
-	
-	@FindBy(linkText="Terms and Conditions")
-	public WebElement Terms_and_Conditions_button;
-	
-	@FindBy(linkText="Disclaimer ")
-	public WebElement Disclaimer_button;
-	
-	@FindBy(linkText="Site Map")
-	public WebElement Site_map_button;
-	
-	public boolean Is_personal_banking_info_opened()
+	public boolean Is_International_Banking_Page_opened()
 	{
 		String Runtime_title=driver.getTitle();
 		boolean flag=Runtime_title.contains(title);
 		return flag;
 		
 	}
+	
 	
 	public void Click_on_Home_button()
 	{
@@ -117,46 +98,4 @@ public class personal_banking_info {
 	{
 		Login_button.click();
 	}
-	
-public void Click_on_Customer_Service_link_button()
-	
-	{
-		
-		Customer_Service_link_button.click();
-		
-	}
-	
-	public void Click_on_International_banking_faqs_button()
-	{
-		
-		International_banking_faqs_button.click();
-	}
-	
-	public void Click_on_privacy_button()
-	
-	{
-		
-		privacy_button.click();
-	}
-	
-	public void Click_on_Terms_and_Conditions_button()
-	{
-		
-		Terms_and_Conditions_button.click();
-		
-	}
-	
-	public void Click_on_Disclaimer_button()
-	{
-		Disclaimer_button.click();
-		
-	}
-	
-	public void Click_on_Site_map_button()
-	{
-		
-		Site_map_button.click();
-	}
-	
-
 }

@@ -98,6 +98,29 @@ public class Employee_info {
 	    {
 	    	Next_Next_button.click();
 	    }
+	    
+	    public boolean is_Alertpresent()
+		{
+			try {
+				driver.switchTo().alert();
+				return true;
+				
+			} catch (Exception e) {
+				return false;
+			}
+		}
+		
+		
+		public void Close_Alert()
+		{
+			if(is_Alertpresent())
+			{
+				driver.switchTo().alert().accept();
+				System.out.println("alert closed successfully");
+			}	
+			else
+				System.out.println("Alert not presented");
+		}
 
 	
 }

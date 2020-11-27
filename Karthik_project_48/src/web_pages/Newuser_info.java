@@ -57,7 +57,7 @@ public class Newuser_info {
 	@FindBy(id="btnCancel")
 	public WebElement Cancel_button;
 	
-	public boolean Is_Employee_homepage_opened()
+	public boolean Is_User_homepage_opened()
 	{
 		String Runtime_title=driver.getTitle();
 		boolean flag=Runtime_title.contains(title);
@@ -90,9 +90,9 @@ public class Newuser_info {
 		new Select(Branch_dropdown).selectByVisibleText(Branch_name);
 	}
 	
-	public void Select_Customer_ID_dropdown(int id)
+	public void Select_Customer_ID_dropdown(String id)
 	{
-		new Select(Customer_ID_dropdown).selectByIndex(id);
+		new Select(Customer_ID_dropdown).selectByVisibleText(id);
 	}
 	
 	public void Type_Customer_Name_editbox(String Customername)

@@ -50,7 +50,7 @@ public class Test_Roles {
 		  
 		  New_Role_info NRI=new New_Role_info(driver);
 		  Assert.assertTrue(NRI.Is_Roles_Homepage_opened());
-		  NRI.Type_on_Role_Name_editbox("karthikkkkkkkk");
+		  NRI.Type_on_Role_Name_editbox("karthikkkkkkkkk");
 		  NRI.Type_on_Role_desc_editbox("Accepts money deposits,money withdraw, cheque deposits and cheque withdraw");
 		  NRI.Select_Role_type_dropdown("E");
 		  NRI.Click_on_Submit_button();
