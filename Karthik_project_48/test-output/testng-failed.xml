@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="web_tests.Test_Branch_update">
+      <class name="banker_Login_Testcase.Run_Banker_login">
         <methods>
+          <include name="TC022_verify_account_details_displayed_using_valid_account_number"/>
+          <include name="Tc_025_Verify_Cheque_Deposit"/>
           <include name="afterClass"/>
           <include name="afterMethod"/>
-          <include name="Tc016_Verify_Branch_updation_link"/>
           <include name="beforeClass"/>
+          <include name="Tc021_Login_As_Banker"/>
         </methods>
-      </class> <!-- web_tests.Test_Branch_update -->
+      </class> <!-- banker_Login_Testcase.Run_Banker_login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

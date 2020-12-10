@@ -27,6 +27,9 @@ public class Receipts_Homepage
 	@FindBy(id="TxtaccNO")
 	public WebElement Account_number_Editbox;
 	
+	 @FindBy(id="TxtCname")
+	 public WebElement Customer_name_Editbox;
+	
 	@FindBy(xpath = "//input[contains(@id,'txttransDate')]")
 	public WebElement Transaction_date;
 	

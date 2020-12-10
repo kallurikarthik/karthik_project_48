@@ -17,6 +17,12 @@ public class Receipts_Transaction_page
 		PageFactory.initElements(driver, this);
 		
 	}
+	
+   @FindBy(id="TxtCname")
+   public WebElement Customer_name_editbox;
+   
+   @FindBy(xpath = "//input[contains(@id,'txtBalans')]")
+   public WebElement Account_balance_editbox;
 		
    @FindBy(id="txtCqueNO")
    public WebElement Cheque_DD_number_editbox;

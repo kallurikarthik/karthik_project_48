@@ -40,7 +40,7 @@ public class Admin_Home {
 	public WebElement Employee_button;
 	
 	
-	public boolean Is_Ranford_Homepage_Opened()
+	public boolean Is_Admin_Home_Opened()
 	{
 		String Runtime_title=driver.getTitle();
 		boolean flag=Runtime_title.contains(title);
