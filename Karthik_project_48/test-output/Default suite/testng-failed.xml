@@ -3,16 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="banker_Login_Testcase.Run_Banker_login">
+      <class name="excel_Datadriven.Run_Datadriven_test">
         <methods>
-          <include name="TC022_verify_account_details_displayed_using_valid_account_number"/>
-          <include name="Tc_025_Verify_Cheque_Deposit"/>
+          <include name="TC032_Creat_a_branch_invalid_data"/>
           <include name="afterClass"/>
           <include name="afterMethod"/>
           <include name="beforeClass"/>
-          <include name="Tc021_Login_As_Banker"/>
+          <include name="TC030_Creat_a_branch_valid_data"/>
         </methods>
-      </class> <!-- banker_Login_Testcase.Run_Banker_login -->
+      </class> <!-- excel_Datadriven.Run_Datadriven_test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

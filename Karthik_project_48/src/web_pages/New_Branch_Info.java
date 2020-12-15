@@ -19,7 +19,7 @@ public class New_Branch_Info {
 		
 	}
 	
-	@FindBy(xpath="//a[@href='adminflow.aspx']")
+	@FindBy(xpath = "//img[@src='images/admin_but_01.jpg']")
 	public WebElement home_button;
 	
 	@FindBy(xpath="//a[@href='change_password.aspx']")

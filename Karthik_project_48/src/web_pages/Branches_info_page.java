@@ -21,7 +21,7 @@ public class Branches_info_page {
 		
 	}
     
-    @FindBy(id="BtnNewBR")
+    @FindBy(xpath = "//input[contains(@id,'BtnNewBR')]")
     public WebElement New_branch_button;
     
     @FindBy(xpath="//select[@id='lst_countryS']")
